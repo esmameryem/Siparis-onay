@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="TR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatiple" content="Chrome" />
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0" />
+    <title> Dokument</title>
+    <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+        }
+    </style>
+<body>
+        <h1>Kişiye Özel Tişört Sipariş Aracı</h1>
+        <hr/>
+        
+        <h2>Kişisel Bilgileri</h2>
+        <p>
+            Lütfen oluşturmak istediğiniz siparişe ilişkin bilgileri doldurunuz!
+            </p>
+        <form id="bilgileri" class="bilgiler">
+        <label for="adiniz"> Adınız:</label>
+        <input type="text" name="Adınız:"/>
+        <br /><br />
+        <label for="soyadiniz">Soyadınız:</label>
+        <input type="text" name="Soyadınız:"/>
+        <br /><br />
+        <label for="select">Doğum Yeri:</label>
+        <select name="Select" id="select">
+            <option value="1">İstanbul</option>
+            <option value="2">İzmir</option>
+        </select>
+        <br /><br />
+        <label for="date">Tarih</label>
+        <input type="datetime-local" name="date" id="date"/>  
+            <br /><br />
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email"/>
+        <br /><br />
+        <label for="telefon">Telefon:</label>
+        <input number="telefon" name="telefon" id="telefon"/>
+        <br /><br />
+        
+    <h2>Sipariş Bilgileri:</h2>
+        <br /><br
+        <label for="tshirtRengi">Tişört Rengi:</label>
+        <input type="color" name="color" id="Renk"/>
+        <br /><br/>
+        <label for="yaziRengi">Yazı Rengi:</label>
+        <input type="color" name="color" id="Yazı Rengi"/>
+        <br /><br />
+        <label for="notes">Tişört Üzerine Yazılacak Yazıyı Giriniz:</label>
+        <input type="text" name="notes" id="notes"/>
+        <br /><br />
+        <label for="adet">Tişört Adedi:</label>
+        <input type="number" name="adet" id="adet"/>
+        <br /><br />
+        <label for="beden">Beden Seçiniz:</label>
+        <input type="range" name="range" id="range" min="0" max="6" step="1" list="bedenSec"/>
+        <datalist id="bedenSec">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+          </datalist>
+        <br /><br />
+        <button id="bedenButton" type="button">Seç</button>
+        <input type="text" name="bedenİnput" id="bedenİnput" disabled/>
+        <br /><br />
+        <label for="adres">Adres:</label>
+        <textarea id="adres" name="adres cols="30" rows="1" style="resize: vertical"></textarea>
+        <br /><br />
+        <label for="teslimatTarihi">Teslimat için bir aralık girin:</label>
+        <input type="week" name="teslimatTarihi" id="teslimatTarihi"/>
+        <br /><br />
+        <h2>Ödeme Bilgileri</h2>
+        <br /><br />
+        <label for="İsimsoyisim">İsim Soyisim:</label>
+        <input type="text" name="isimSoyisim" id="isimSoyisim"/>
+        <br /><br />
+        <label for="kartNumarasi">Kart Numarası:</label>
+        <input type="number" name="kartNumarasi" id="kartNumarasi" placeholder="xxxx xxxx xxxx xxxx"/>
+        <br /><br />
+        <label for="sonKullanmaTarihi">Son Kullanma Tarihi:</label>
+        <input type="month" name="sonkullanmatarihi" id="sonkullanmatarihi"/>
+        <br /><br />
+        <input type="submit" value="Onayla" id="onayla"/>
+        </form>
+        <br /><br />
+    <table>
+            <tr>
+                <td rowspan="5">Kişisel Bilgiler</td> 
+                <td>Ad:</td>
+                <td><input type="text" name="ad"/></td>
+            </tr>
+            <tr>
+                <td>Soyad:</td>
+                <td><input type="text" name="soyad"/></td>
+            </tr>
+            <tr>
+                <td>Doğum Tarihi:</td>
+                <td><input type="text" name="dogumTarihi"></td>
+            </tr>
+            <tr>
+                <td>Mail:</td>
+                <td><input type="email" name="email"/></td>
+            </tr>
+            <tr>
+                <td>Telefon:</td>
+                <td><input type="text" name="telefon"/></td>
+            </tr>
+        
+            <td rowspan="5">Sipariş Bilgileri:</td>
+
+                <td>Tişört Rengi</td>
+                 <td><input type="text" name="tisortRengi"></td>
+                    </tr>
+            <tr>
+                <td>Yazı Rengi</td>
+                <td><input type="text" name="yaziRengi"></td>
+            </tr>
+            <tr>
+                <td>Yazı</td>
+                <td><input type="text" name="yazi"></td>
+            </tr>
+            <tr>
+                <td>Tişört Adedi:</td>
+                <td><input type="text" name="TisortAdedi"></td>
+            </tr>
+            <tr>
+                      <td>Tişört Bedeni:</td>
+                      <td><input type="text" name="tisortBedeni"></td>
+            </tr>
+
+                <td rowspan="2">Teslimat Bilgileri:</td>
+                <td>Adres:</td>
+                <td><input type="text" name="adres"></td>
+            </tr>
+            <tr>
+                <td>Teslim Tarihi:</td>
+                <td><input type="number" name="teslimTarihi"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">Ödeme Bilgileri:</td>
+                <td>Ad Soyad:</td>
+                <td><input type="text" name="adsoyad"></td>
+            </tr>
+            <tr>
+                <td>Kart Numarası:</td>
+                <td><input type="number" name="kartNumarası"></td
+            </tr>
+            <tr>
+                <td>Son Kullanma Tarihi:</td>
+                <td><input type="number" name="sonKullanma"></td>
+            </tr>
+            <tr>
+                <td>CVV:</td>
+                <td><input type="number" name="cvV"></td>
+            </tr>
+            <br/><br>
+            <table>
+                <tr>
+                <td><input type="submit" name="tamamla"></td>
+            </tr>
+            <br/><br/>
+        </body>    
+
+            
+    </thead>
+</table>
+
+
